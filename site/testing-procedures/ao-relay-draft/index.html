@@ -1,0 +1,881 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../bus-scanner-tscb-2-test/">
+      
+      
+        <link rel="next" href="../bus-scanner-counter-box-input-enclosure-test-draft/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>A/O Relay - AEI Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/comment.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ao-relay" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AEI Documentation" class="md-header__button md-logo" aria-label="AEI Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AEI Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A/O Relay
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AEI Documentation" class="md-nav__button md-logo" aria-label="AEI Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    AEI Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing procedures
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing procedures
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bus-scanner-tscb-2-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TSCB-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A/O Relay
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A/O Relay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-rig-prerequisite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Rig Prerequisite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Rig Prerequisite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wiring-the-module-to-test-rig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiring the module to test rig
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-bus-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the Bus Scanner
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the Bus Scanner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ao-relay-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AO Relay Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AO Relay Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volt-measurement-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volt Measurement Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuity-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuity Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bus-scanner-counter-box-input-enclosure-test-draft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Counter Box Input Enclosure Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcu-bus-scanner-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCU Bus Scanner Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-rig-prerequisite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Rig Prerequisite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Rig Prerequisite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wiring-the-module-to-test-rig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiring the module to test rig
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-bus-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the Bus Scanner
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the Bus Scanner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ao-relay-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AO Relay Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AO Relay Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volt-measurement-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volt Measurement Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuity-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuity Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ao-relay">A/O Relay</h1>
+<h2 id="requirement">Requirement</h2>
+<ul>
+<li>Flat Head Screwdriver (0.5 x 3.0)</li>
+<li>Test Rig</li>
+<li>4-conductor cable</li>
+<li>Multi Meter</li>
+<li>AO Relay Enclosure</li>
+</ul>
+<h2 id="test-rig-prerequisite">Test Rig Prerequisite</h2>
+<h3 id="wiring-the-module-to-test-rig">Wiring the module to test rig</h3>
+<ul>
+<li>
+<p>Use a 4-conductor wire to the Test Rig, apply the +24V, -24V, -485, and +485</p>
+</li>
+<li>
+<p>Plug in the corresponding +24V, -24V, -485, +485, -24V wire to the 6-position terminal block on the A3017 board.</p>
+</li>
+</ul>
+<p><img alt="image1" src="../../assets/imported/ao-relay-draft/image1.jpg" /></p>
+<p>+24V, -24V, -485, +485, -24V plugged into the 6-position terminal block</p>
+<ul>
+<li>On the A3009 from the Test Rig, bring the COM Port to connect to the desired serial port</li>
+<li>Turn on the breaker</li>
+</ul>
+<h2 id="running-the-bus-scanner">Running the Bus Scanner</h2>
+<ul>
+<li>Run the bus scanner program on the Tools folder on W:\MN\Control Systems\Software\Echo Bus and Bus Scanner\echobus.exe</li>
+<li>A web browser will open at http://localhost:5001</li>
+</ul>
+<p><img alt="image2" src="../../assets/imported/ao-relay-draft/image2.png" /></p>
+<p>Echobus application running</p>
+<ul>
+<li>Alternate way of opening Bus Scanner is by entering the link on the search bar http://localhost:5001/scanner</li>
+</ul>
+<p><img alt="image3" src="../../assets/imported/ao-relay-draft/image3.png" /></p>
+<p>Bus Scanner found on the left side under Pages</p>
+<p><img alt="image4" src="../../assets/imported/ao-relay-draft/image4.png" /></p>
+<ul>
+<li>
+<p>A disconnected highlighted text on top right will show if you have not made the COM Port connection that your Rig Test is connected onto serial port.</p>
+</li>
+<li></li>
+<li>
+<p>Once the bus scanner is opened, hover over COM Port and select the appropriate COM port being used from the Test Rig to the connected serial port, then click Connect.</p>
+</li>
+<li>Leave Baud Rate, Parity, and Timeout(s) to normal setting.</li>
+<li>If the connection is not valid, the message "Cannot Open Com" will appear.<ul>
+<li>Verify the COM wiring on the test rig</li>
+<li>Verify COM Port connection to the Serial Port.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image5" src="../../assets/imported/ao-relay-draft/image5.png" /></p>
+<p>COM Port 1 connection successful</p>
+<h3 id="device-selection">Device Selection</h3>
+<ul>
+<li>On Device Type, select AO/Relay (16 devices)</li>
+</ul>
+<p><img alt="image6" src="../../assets/imported/ao-relay-draft/image6.png" /></p>
+<ul>
+<li>Add the number of Counter Module based on Device ID</li>
+<li>Device ID = module number</li>
+<li>
+<p>Adjust the modbus dip switch address based on the module number</p>
+<ul>
+<li>I.e., AO Module 2-4 set dip switches to 2,3, and 4, then select Device ID of 2-4 for the number of sensors.</li>
+</ul>
+</li>
+<li>
+<p>Click on Add and Start Monitor</p>
+</li>
+</ul>
+<p><img alt="image7" src="../../assets/imported/ao-relay-draft/image7.png" /></p>
+<p>Once the AO Relay device IDs are added and monitoring, the AO Relay module device ID will be displayed and ready to test.</p>
+<h2 id="ao-relay-test">AO Relay Test</h2>
+<h3 id="volt-measurement-test">Volt Measurement Test</h3>
+<ul>
+<li>Check <code>map.csv</code> for changes to AO Relay setup (for example, if no egg speed/egg start, remove the blue wire jumper between AO 1 and AO 4).</li>
+<li>Plug AO Relay into the same cable used for counters.</li>
+<li>
+<p>AO Relay causes INT to trigger and can be used to test INT on counters.</p>
+</li>
+<li>
+<p>Select AO Relay in Modbus Monitor with corresponding Device IDs.</p>
+</li>
+<li>Set AO Relay holding register (Reg 1) to 5000.</li>
+</ul>
+<p><img alt="image8" src="../../assets/imported/ao-relay-draft/image8.png" /></p>
+<p>AO1 entered with value of 5000</p>
+<ul>
+<li>Set a multimeter to measure DC Voltage.</li>
+<li>Placing the black probe on -24V and the red probe on AO 1 measure the voltage (the 5000 set in step 3 should equal 5V).</li>
+</ul>
+<p><img alt="image9" src="../../assets/imported/ao-relay-draft/image9.jpg" /></p>
+<p>Black probe on -24V and red probe on AO1</p>
+<p><img alt="image10" src="../../assets/imported/ao-relay-draft/image10.jpg" /></p>
+<p>Multimeter reading approximate 5.0V</p>
+<ul>
+<li>Reset the holding register to 0.</li>
+<li>Repeat steps 3-6 for the remaining holding registers and measure the corresponding AO on the A3017 board.</li>
+</ul>
+<h3 id="continuity-test">Continuity Test</h3>
+<ul>
+<li>Set the multimeter to the continuity setting.</li>
+</ul>
+<p><img alt="image11" src="../../assets/imported/ao-relay-draft/image11.jpg" /></p>
+<p>Multimeter on continuity setting</p>
+<ul>
+<li>Check for close between 1 C and 1 NO (No beep).</li>
+<li>In Modbus Monitor toggle Coils #0.</li>
+</ul>
+<p><img alt="image12" src="../../assets/imported/ao-relay-draft/image12.png" /></p>
+<p>Coil #0 toggled ON</p>
+<ul>
+<li>Check for open between 1 C and 1 NO (beep).</li>
+</ul>
+<p><img alt="image13" src="../../assets/imported/ao-relay-draft/image13.jpg" /></p>
+<p>Checking for open between 1C and 1NO</p>
+<ul>
+<li>Repeat steps 8-11 for the remaining Coils and corresponding C and NO on A3017 board.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/user.js"></script>
+      
+        <script src="../../assets/javascripts/comment.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,77 @@
+/* Remove o rodapé */
+.md-footer {
+    display: none;
+}
+
+/* Remove o índice lateral direito da página */
+.md-sidebar--secondary {
+    display: none;
+}
+
+/* Dá mais espaço para o conteúdo */
+.md-content {
+    max-width: none;
+}
+
+/* Logo do cabeçalho */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 32px;
+    width: auto;
+}
+
+/* Remove sombra exagerada do header */
+.md-header {
+    color: #000;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.md-header__button,
+.md-header__title,
+.md-tabs__link {
+    color: #000;
+}
+
+@media print {
+
+    .md-sidebar,
+    .md-footer,
+    .md-search {
+        display: none !important;
+    }
+
+    .md-header {
+        display: block !important;
+        position: static;
+        color: inherit;
+        background: transparent;
+        box-shadow: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .md-header__inner {
+        padding: 0 0 10px;
+    }
+
+    .md-header__button:not(.md-logo),
+    .md-header__title,
+    .md-tabs {
+        display: none !important;
+    }
+
+    .md-header__button.md-logo {
+        margin: 0;
+        padding: 0;
+    }
+
+    .md-header__button.md-logo img,
+    .md-header__button.md-logo svg {
+        height: 48px;
+        width: auto;
+    }
+
+    .md-main__inner {
+        margin-top: 20px;
+    }
+}
