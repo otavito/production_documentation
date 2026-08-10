@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% if page and page.meta %}
+    {% if page.meta.document_id %}
+      <meta name="doc:document_id" content="{{ page.meta.document_id }}">
+    {% endif %}
+    {% if page.title %}
+      <meta name="doc:document_title" content="{{ page.title }}">
+    {% endif %}
+    {% if page.meta.revision %}
+      <meta name="doc:document_revision" content="{{ page.meta.revision }}">
+    {% endif %}
+    {% if page.meta.section %}
+      <meta name="doc:section" content="{{ page.meta.section }}">
+    {% endif %}
+  {% endif %}
+{% endblock %}

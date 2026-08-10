@@ -1,0 +1,30 @@
+site_name: AEI Documentation
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+
+  features:
+    - navigation.sections
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Testing procedures:
+      - TSCB-2: testing-procedures/bus-scanner-tscb-2-test.md
+      - A/O Relay: testing-procedures/ao-relay-draft.md
+      - Counter Box Input Enclosure Test: testing-procedures/bus-scanner-counter-box-input-enclosure-test-draft.md
+      - MCU Bus Scanner Test: testing-procedures/mcu-bus-scanner-test.md
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/comment.css
+
+extra_javascript:
+  - assets/javascripts/user.js
+  - assets/javascripts/comment.js
