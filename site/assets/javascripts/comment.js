@@ -266,7 +266,7 @@
     }
 
     function getCommentEndpoint() {
-        return '/api/comment';
+        return 'https://partsorder-api-hne6dzfudubdfvg0.westus3-01.azurewebsites.net/api/comment';
     }
 
     async function updateUserContext() {
