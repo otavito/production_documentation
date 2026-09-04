@@ -3,9 +3,6 @@
 
     /**
      * Read-only view of the open (unresolved) suggestions for the current document.
-     *
-     * Flow: page -> GET <API_BASE>/comments-list?page=... -> Azure Function -> Azure Table Storage.
-     * The frontend never reads Azure Table Storage directly.
      */
 
     var API_BASE = 'https://partsorder-api-hne6dzfudubdfvg0.westus3-01.azurewebsites.net/api';
@@ -189,9 +186,7 @@
     }
 
     /**
-     * Keeps only the open suggestions that belong to the current document. The
-     * backend is expected to filter already; this is a guard for a backend that
-     * ignores the query parameters, so a resolved suggestion can never surface.
+     * Keeps only the open suggestions that belong to the current document.
      */
     function selectOpenSuggestions(payload, context) {
         var currentPath = normalizePath(context.documentUrl);
@@ -550,8 +545,6 @@
 
             setLoading(false);
 
-            // An API failure must never block reading the documentation: leave
-            // the page untouched and only surface the error inside an open panel.
             if (state.isOpen) {
                 setError('Suggestions could not be loaded. Try again later.');
                 renderList();
