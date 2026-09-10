@@ -1,4 +1,24 @@
-﻿# TSCB-2
+---
+document_id: WI-TSCB2-001
+revision: 4
+last_updated: 2026-08-20
+document_owner: Randy Zhagui
+approver: Otavio
+approval_date: 2026-09-10
+revision_history:
+  - revision: 2
+    date: 2026-06-02
+    description: Updated fixture image
+  - revision: 4
+    date: 2026-08-20
+    description: Updated voltage requirement
+  - revision: 3
+    date: 2026-07-15
+    description: Added communication test
+---
+
+
+# TSCB-2
 
 ## Requirement
 

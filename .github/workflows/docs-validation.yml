@@ -1,0 +1,32 @@
+name: Documentation validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate docs and revision metadata
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Fails on malformed revision metadata: unparseable dates, a
+      # revision_history that is not a list, broken links, missing nav entries.
+      - name: Build documentation (strict)
+        run: python -m mkdocs build --strict
+
+      - name: Run revision hook tests
+        run: python -m unittest discover -s tools -p "test_*.py" -v

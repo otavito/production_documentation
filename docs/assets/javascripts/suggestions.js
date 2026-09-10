@@ -372,9 +372,10 @@
             wrap.className = 'suggestions-trigger-wrap';
             wrap.appendChild(trigger);
 
-            var heading = article.querySelector('h1');
-            if (heading && heading.parentNode) {
-                heading.insertAdjacentElement('afterend', wrap);
+            // Keep the revision stamp directly under the title when present.
+            var anchor = article.querySelector('.doc-revision') || article.querySelector('h1');
+            if (anchor && anchor.parentNode) {
+                anchor.insertAdjacentElement('afterend', wrap);
             } else {
                 article.insertAdjacentElement('afterbegin', wrap);
             }

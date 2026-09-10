@@ -1,4 +1,14 @@
-﻿## MCU - 1
+---
+document_id: WI-MCU-001
+revision: 1
+last_updated: 2026-08-10
+revision_history:
+  - revision: 1
+    date: 2026-08-10
+    description: Initial release of the MCU bus scanner test procedure.
+---
+
+## MCU - 1
 
 ## Requirements
 

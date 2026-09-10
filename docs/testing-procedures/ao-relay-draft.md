@@ -1,4 +1,14 @@
-﻿# A/O Relay
+---
+document_id: WI-AOR-001
+revision: 1
+last_updated: 2026-08-10
+revision_history:
+  - revision: 1
+    date: 2026-08-10
+    description: Initial release of the A/O Relay test procedure.
+---
+
+# A/O Relay
 
 ## Requirement
 

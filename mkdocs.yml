@@ -13,6 +13,9 @@ theme:
 plugins:
   - search
 
+hooks:
+  - tools/document_revision.py
+
 nav:
   - Home: index.md
   - Testing procedures:
@@ -25,8 +28,10 @@ extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/comment.css
   - assets/stylesheets/suggestions.css
+  - assets/stylesheets/revision.css
 
 extra_javascript:
   - assets/javascripts/user.js
   - assets/javascripts/comment.js
   - assets/javascripts/suggestions.js
+  - assets/javascripts/revision.js

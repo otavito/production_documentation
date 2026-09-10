@@ -12,6 +12,18 @@
     {% if page.meta.revision %}
       <meta name="doc:document_revision" content="{{ page.meta.revision }}">
     {% endif %}
+    {% if page.meta.last_updated %}
+      <meta name="doc:last_updated" content="{{ page.meta.last_updated }}">
+    {% endif %}
+    {% if page.meta.document_owner %}
+      <meta name="doc:document_owner" content="{{ page.meta.document_owner }}">
+    {% endif %}
+    {% if page.meta.approver %}
+      <meta name="doc:approver" content="{{ page.meta.approver }}">
+    {% endif %}
+    {% if page.meta.approval_date %}
+      <meta name="doc:approval_date" content="{{ page.meta.approval_date }}">
+    {% endif %}
     {% if page.meta.section %}
       <meta name="doc:section" content="{{ page.meta.section }}">
     {% endif %}

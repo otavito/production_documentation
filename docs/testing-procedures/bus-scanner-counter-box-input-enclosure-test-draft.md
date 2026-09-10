@@ -1,4 +1,14 @@
-﻿# Counter Box/Input Enclosure Test
+---
+document_id: WI-CBIE-001
+revision: 1
+last_updated: 2026-08-10
+revision_history:
+  - revision: 1
+    date: 2026-08-10
+    description: Initial release of the Counter Box / Input Enclosure test procedure.
+---
+
+# Counter Box/Input Enclosure Test
 
 ## Requirements
 

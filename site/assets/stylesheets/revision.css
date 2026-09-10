@@ -1,0 +1,113 @@
+/* Carimbo de revisão exibido abaixo do título da página */
+.md-typeset .doc-revision {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin: -0.4rem 0 1rem;
+    color: rgba(0, 0, 0, 0.62);
+    font-size: 0.68rem;
+    line-height: 1.4;
+}
+
+.md-typeset .doc-revision__id {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.78);
+}
+
+.md-typeset .doc-revision__sep {
+    color: rgba(0, 0, 0, 0.34);
+}
+
+/* Histórico de revisões no fim do documento */
+.md-typeset .doc-revision-history {
+    margin: 2rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    padding-top: 0.8rem;
+    font-size: 0.7rem;
+}
+
+.md-typeset .doc-revision-history > summary {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.62);
+    font-weight: 700;
+}
+
+.md-typeset .doc-revision-history > summary:focus-visible {
+    outline: 2px solid #1f6feb;
+    outline-offset: 2px;
+}
+
+.md-typeset .doc-revision-history__body {
+    padding-top: 0.6rem;
+}
+
+.md-typeset .doc-revision-history__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0.8rem;
+}
+
+.md-typeset .doc-revision-history__table th,
+.md-typeset .doc-revision-history__table td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0.35rem 0.6rem 0.35rem 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.md-typeset .doc-revision-history__table thead th {
+    color: rgba(0, 0, 0, 0.62);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.md-typeset .doc-revision-history__table--details th {
+    width: 12rem;
+    color: rgba(0, 0, 0, 0.62);
+    font-weight: 400;
+}
+
+@media print {
+
+    /* O carimbo acompanha a impressão, junto ao logo já exibido no cabeçalho */
+    .md-typeset .doc-revision {
+        color: #000;
+        font-size: 10pt;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 6pt;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .md-typeset .doc-revision__id,
+    .md-typeset .doc-revision__sep {
+        color: #000;
+    }
+
+    /* O histórico é aberto por revision.js antes de imprimir */
+    .md-typeset .doc-revision-history {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .md-typeset .doc-revision-history > summary {
+        list-style: none;
+        color: #000;
+    }
+
+    .md-typeset .doc-revision-history > summary::marker {
+        content: "";
+    }
+
+    .md-typeset .doc-revision-history > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .md-typeset .doc-revision-history__table th,
+    .md-typeset .doc-revision-history__table td {
+        border-bottom: 1px solid #ccc;
+        color: #000;
+    }
+}
