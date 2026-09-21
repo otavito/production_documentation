@@ -24,7 +24,9 @@ nav:
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/comment.css
+  - assets/stylesheets/suggestions.css
 
 extra_javascript:
   - assets/javascripts/user.js
   - assets/javascripts/comment.js
+  - assets/javascripts/suggestions.js
