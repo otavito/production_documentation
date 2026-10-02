@@ -28,4 +28,9 @@
       <meta name="doc:section" content="{{ page.meta.section }}">
     {% endif %}
   {% endif %}
+  {% if page and page.file and page.file.src_uri %}
+    {# Raw Markdown published by tools/document_source.py; read by editor.js #}
+    <meta name="doc:source_path" content="docs/{{ page.file.src_uri }}">
+    <meta name="doc:source_url" content="{{ base_url }}/_edit/source/{{ page.file.src_uri }}">
+  {% endif %}
 {% endblock %}

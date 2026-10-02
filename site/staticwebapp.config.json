@@ -1,4 +1,7 @@
 {
+  "platform": {
+    "apiRuntime": "python:3.11"
+  },
   "responseOverrides": {
     "401": {
       "redirect": "/.auth/login/aad?post_login_redirect_uri=/",
@@ -9,6 +12,14 @@
     {
       "route": "/.auth/*",
       "allowedRoles": ["anonymous", "authenticated"]
+    },
+    {
+      "route": "/api/edit/*",
+      "allowedRoles": ["docs-editor"]
+    },
+    {
+      "route": "/_edit/*",
+      "allowedRoles": ["docs-editor"]
     },
     {
       "route": "/api/*",

@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "GITHUB_REPOSITORY": "otavito/production_documentation",
+    "GITHUB_TOKEN": "<fine-grained PAT with Contents + Pull requests read/write>",
+    "DOCS_BASE_BRANCH": "main"
+  }
+}
