@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AUTHORIZED_USERS_CONNECTION_STRING": "<storage-account-connection-string>",
+    "AUTHORIZED_USERS_TABLE_NAME": "AuthorizedUsers",
+    "DEFAULT_ROLE": "viewer",
+    "ALLOW_UNVERIFIED_PRINCIPAL": "true"
+  }
+}

@@ -1,4 +1,7 @@
 {
+  "platform": {
+    "apiRuntime": "node:20"
+  },
   "responseOverrides": {
     "401": {
       "redirect": "/.auth/login/aad?post_login_redirect_uri=/",
@@ -9,6 +12,10 @@
     {
       "route": "/.auth/*",
       "allowedRoles": ["anonymous", "authenticated"]
+    },
+    {
+      "route": "/api/access-users*",
+      "allowedRoles": ["admin"]
     },
     {
       "route": "/api/*",
