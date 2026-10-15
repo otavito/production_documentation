@@ -1,0 +1,12 @@
+{
+  "name": "production-documentation-api",
+  "version": "1.0.0",
+  "description": "User management functions for the production documentation site",
+  "private": true,
+  "scripts": {
+    "start": "func start"
+  },
+  "dependencies": {
+    "@azure/data-tables": "^13.3.0"
+  }
+}
